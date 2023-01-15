@@ -18,3 +18,4 @@ docker inspect container_name - inspect the settings / configuration of the cont
 docker logs container_name - View logs of the mentioned container
 docker build -t username/appName - Build docker image based on dockerfile
 docker run -e ENV=value container_name - Set environment variable to used by the code (os.environ.get('ENV'))
+docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=db_pass123 -d mysql - Deploy MySQL server on Docker with PWD
