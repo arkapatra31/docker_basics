@@ -17,3 +17,4 @@ docker run -v /dir_outside_container:/dir_inside_container container_name - This
 docker inspect container_name - inspect the settings / configuration of the container
 docker logs container_name - View logs of the mentioned container
 docker build -t username/appName - Build docker image based on dockerfile
+docker run -e ENV=value container_name - Set environment variable to used by the code (os.environ.get('ENV'))
