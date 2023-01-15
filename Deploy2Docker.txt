@@ -1,0 +1,6 @@
+Create the Node.JS Application using npm init
+Create a Dockerfile file
+Create a .dockerignore file
+docker build -t username/appName .
+docker container run -d -p 5000:5000 username.appName
+docker push username/appName

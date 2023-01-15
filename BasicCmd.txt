@@ -1,14 +1,19 @@
-1. docker run nginx - Start a container
-2. docker ps - List containers
-3. docker ps -a - List of containers active or exited
-4. docker stop container_name - Stop a container
-5. docker rm container_name - Remove a container
-6. docker images - List of images
-7. docker rmi image_name - Remove an image_name
-8. docker pull image_name - Pull / download an image
-9. docker exec container_name cat /etc/hosts - Executes command on running container
-10. docker run container -  Run or rather attaches to the container
-11. docker run -d container - Detach from the container
-12. docker attach cotainer_id - Attaches the container
-13. docker run -d container_name - Runs the container in background
-14. docker stop cotainer_id - Stops the running container
+docker run nginx - Start a container
+docker ps - List containers
+docker ps -a - List of containers active or exited
+docker stop container_name - Stop a container
+docker rm container_name - Remove a container
+docker images - List of images
+docker rmi image_name - Remove an image_name
+docker pull image_name - Pull / download an image
+docker exec container_name cat /etc/hosts - Executes command on running container
+docker run container -  Run or rather attaches to the container
+docker attach cotainer_id - Attaches the container
+docker run -d container_name - Runs the container in background
+docker stop cotainer_id - Stops the running container
+docker run -it container_name - i for input and t for launching the terminal in interactive mode of the container
+docker run -p 80:5000 container_name - This binds the connection between 2 ports 80(container host) and 5000(container internal port)
+docker run -v /dir_outside_container:/dir_inside_container container_name - This maps directory outside : insider container
+docker inspect container_name - inspect the settings / configuration of the container
+docker logs container_name - View logs of the mentioned container
+docker build -t username/appName - Build docker image based on dockerfile
