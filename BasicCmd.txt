@@ -21,3 +21,9 @@ docker run -e ENV=value container_name - Set environment variable to used by the
 docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=db_pass123 -d mysql - Deploy MySQL server on Docker with PWD
 docker run --name=appName container_name - Runs the container with the speicified name
 docker run --links myContainer:container_in_host myContainer1 - This will link the two containers if they are inter-related
+
+DEPLOY PRIVATE REGISTRY TO DOCKER
+docker run -d -p 5000:5000 --name registry registry:2
+docker image tag my-image localhost:5000/my-image
+docker push localhost:5000/my-image / docker push 192.168.56.100:5000/my-image
+docker pull localhost:5000/my-image / docker pull 192.168.56.100:5000/my-image
