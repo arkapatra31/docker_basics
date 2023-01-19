@@ -1,0 +1,8 @@
+version: '2'
+services:
+  redis:
+    image: redis
+  app:
+    image: arkapatra31/basic_node_docker_deployed
+    ports:
+      - 5000:5000
